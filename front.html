@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water and Electricity Tracking</title>
+    <!-- Add CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Water and Electricity Tracking</h1>
+    </header>
+
+    <main>
+        <section id="water-usage">
+            <h2>Water Usage</h2>
+            <canvas id="waterChart"></canvas>
+        </section>
+
+        <section id="electricity-usage">
+            <h2>Electricity Usage</h2>
+            <!-- Add data or charts for electricity usage here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Water and Electricity Tracking. All rights reserved.</p>
+    </footer>
+
+    <!-- Add JavaScript file for functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('waterChart').getContext('2d');
+            const waterChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    datasets: [{
+                        label: 'Water Usage (m³)',
+                        data: [120, 95, 110, 130, 100, 125, 140, 150, 160, 145, 130, 155],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
