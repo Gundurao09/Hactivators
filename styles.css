@@ -2,6 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("wephoto.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -12,40 +15,33 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
     padding: 2rem;
 }
 
-#water {
-    width: 45%;
-    background-color: #db1919;
-    padding: 90px;
-    margin-top: 150px;
-    border-radius: 50px;
+#water,
+#electricity {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
     text-align: center;
-    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: larger;
+    margin: 20px auto;
+    padding: 20px;
+    display: block;
+    font: bolder;
+    color: black;
 }
 
-#water:hover {
-    opacity: 0.6;
-}
-
-#electricity:hover {
-    opacity: 0.6;
+#water {
+    background-image: url("water.jpg");
 }
 
 #electricity {
-    width: 45%;
-    background-color: #db1919;
-    padding: 1rem;
-    margin-top: 150px;
-    border-radius: 50px;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: black;
+    background-image: url("electricity.jpeg");
 }
-
 
 footer {
     background-color: #4CAF50;
